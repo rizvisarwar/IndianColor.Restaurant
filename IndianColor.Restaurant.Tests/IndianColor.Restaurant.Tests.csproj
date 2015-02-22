@@ -115,8 +115,8 @@
       <Project>{fe345da9-8b44-402e-a244-cf1ae6624748}</Project>
       <Name>IndianColor.Restaurant.Domain</Name>
     </ProjectReference>
-    <ProjectReference Include="..\IndianColor.Restaurant\IndianColor.Restaurant.WebUI.csproj">
-      <Project>{EF82677A-8338-4052-8CA6-25D803CE62C0}</Project>
+    <ProjectReference Include="..\IndianColor.Restaurant.WebUI\IndianColor.Restaurant.WebUI.csproj">
+      <Project>{ef82677a-8338-4052-8ca6-25d803ce62c0}</Project>
       <Name>IndianColor.Restaurant.WebUI</Name>
     </ProjectReference>
   </ItemGroup>

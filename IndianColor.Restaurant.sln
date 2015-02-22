@@ -3,13 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
 VisualStudioVersion = 12.0.31101.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IndianColor.Restaurant.WebUI", "IndianColor.Restaurant\IndianColor.Restaurant.WebUI.csproj", "{EF82677A-8338-4052-8CA6-25D803CE62C0}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IndianColor.Restaurant.Tests", "IndianColor.Restaurant.Tests\IndianColor.Restaurant.Tests.csproj", "{2D27DC37-D425-4448-A26C-C63938075CEF}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IndianColor.Restaurant.Domain", "IndianColor.Restaurant.Domain\IndianColor.Restaurant.Domain.csproj", "{FE345DA9-8B44-402E-A244-CF1AE6624748}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IndianColor.Restaurant.Transit", "IndianColor.Restaurant.Transit\IndianColor.Restaurant.Transit.csproj", "{A090D2F6-79ED-4EF3-A5A7-C7B5F9CD7924}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IndianColor.Restaurant.WebUI", "IndianColor.Restaurant.WebUI\IndianColor.Restaurant.WebUI.csproj", "{EF82677A-8338-4052-8CA6-25D803CE62C0}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,10 +17,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{EF82677A-8338-4052-8CA6-25D803CE62C0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{EF82677A-8338-4052-8CA6-25D803CE62C0}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{EF82677A-8338-4052-8CA6-25D803CE62C0}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{EF82677A-8338-4052-8CA6-25D803CE62C0}.Release|Any CPU.Build.0 = Release|Any CPU
 		{2D27DC37-D425-4448-A26C-C63938075CEF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{2D27DC37-D425-4448-A26C-C63938075CEF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2D27DC37-D425-4448-A26C-C63938075CEF}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -33,6 +29,10 @@ Global
 		{A090D2F6-79ED-4EF3-A5A7-C7B5F9CD7924}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A090D2F6-79ED-4EF3-A5A7-C7B5F9CD7924}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A090D2F6-79ED-4EF3-A5A7-C7B5F9CD7924}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EF82677A-8338-4052-8CA6-25D803CE62C0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EF82677A-8338-4052-8CA6-25D803CE62C0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EF82677A-8338-4052-8CA6-25D803CE62C0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EF82677A-8338-4052-8CA6-25D803CE62C0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
