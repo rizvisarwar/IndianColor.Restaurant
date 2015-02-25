@@ -1,0 +1,14 @@
+﻿
+@{
+    ViewBag.Title = "Administrative Page";
+}
+<h2>@ViewBag.Title</h2>
+<h3>@ViewBag.Message</h3>
+
+<h2>Add new menu item</h2><br />
+<input type="text" id="AddMenuName" class="form-control" placeholder="Menu Name" aria-describedby="basic-addon1">
+<input type="text" id="AddCategory" class="form-control" placeholder="Category" aria-describedby="basic-addon1">
+<input type="text" id="AddDescrioption" class="form-control" placeholder="Description" aria-describedby="basic-addon1">
+<input type="text" id="AddPrice" class="form-control" placeholder="Price" aria-describedby="basic-addon1">
+<li><button type="button" class="btn btn-primary" onclick="Utils.AddFoodMenuItem($('#AddMenuName').val(), $('#AddCategory').val(), $('#AddDescrioption').val(), $('#AddPrice').val())">Add</button></li>
+<div id="ItemAddResult"></div>

@@ -17,18 +17,21 @@ namespace IndianColor.Restaurant.Controllers
         {
             List<FoodMenuItemModels.FoodMenuItemModel> data = new List<FoodMenuItemModels.FoodMenuItemModel>();
 
-            FoodMenuItemModels.FoodMenuItemModel obj = new FoodMenuItemModels.FoodMenuItemModel();
-            obj.ItemID = 1;
-            obj.Name = "Biriyani";
-            obj.Price = 120;
-            data.Add(obj);
-            FoodMenuItemModels.FoodMenuItemModel obj1 = new FoodMenuItemModels.FoodMenuItemModel();
-
-            obj1.ItemID = 2;
-            obj1.Name = "Curry";
-            obj1.Price = 100;
-            data.Add(obj1);
-            return View(data);
+            IndianColorEntities db = new IndianColorEntities();
+            var menuQuery = from menu in db.FoodMenuItems
+                            select menu;
+            foreach (var item in menuQuery.ToList())
+            {
+                FoodMenuItemModels.FoodMenuItemModel obj = new FoodMenuItemModels.FoodMenuItemModel();
+                obj.ItemID = item.ItemID;
+                obj.Name = item.Name;
+                obj.Price = item.Price;
+                obj.Description = item.Description;
+                obj.Category = item.Category;
+                data.Add(obj);
+            }
+            
+            return View(data);            
         }
     }
 }
