@@ -3,26 +3,51 @@
 }
 <h2>@ViewBag.Title.</h2>
 <h3>@ViewBag.Message</h3>
-Priyanka: Your next task is to set up this page!
 <div class="row">
-    <div class="col-md-4">
-        <h2>Getting started</h2>
-        <p>
-            ASP.NET MVC gives you a powerful, patterns-based way to build dynamic websites that
-            enables a clean separation of concerns and gives you full control over markup
-            for enjoyable, agile development.
-        </p>
-        <p><a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301865">Learn more &raquo;</a></p>
+    <div class="col-md-8">
+        <div id="carousel-example-generic" class="carousel slide" data-ride="carousel" style="width:600px;height:400px">
+            <!-- Indicators -->
+            <ol class="carousel-indicators">
+                <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+                <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+            </ol>
+            <!-- Wrapper for slides -->
+            <div class="carousel-inner" role="listbox">
+                <div class="item active">
+                    <img src="~/Images/food_image_slide1.jpg" alt="..." style="width:100%;height:100%">
+                </div>
+                <div class="item">
+                    <img src="~/Images/food_image_slide2.jpg" alt="..." style="width:100%;height:100%">
+                </div>
+            </div>
+            <!-- Controls -->
+            <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+                <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+                <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
+        </div>
     </div>
     <div class="col-md-4">
-        <h2>Get more libraries</h2>
-        <p>NuGet is a free Visual Studio extension that makes it easy to add, remove, and update libraries and tools in Visual Studio projects.</p>
-        <p><a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301866">Learn more &raquo;</a></p>
-    </div>
-    <div class="col-md-4">
-        <h2>Web Hosting</h2>
-        <p>You can easily find a web hosting company that offers the right mix of features and price for your applications.</p>
-        <p><a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301867">Learn more &raquo;</a></p>
+        <h2>MAKE A RESERVATION!</h2>
+        <p>I'm a Paragraph. Click here to add your own text and edit me. ​It’s easy. Just click “Edit Text” or double click me and you can start adding your own content...</p>
+        <p>Click here to make a reservation online or <b>call us</b></p>
+        <p><b>+4670000000</b></p>
+        <p><a class="btn btn-default" href="@Url.Action("Reservations", "Home")">Make a reservation &raquo;</a></p>
     </div>
 </div>
-
+<div class="row">
+    <div class="col-md-6">
+        <h2>Welcome</h2>
+        <p>I'm a Paragraph. Click here to add your own text and edit me. It’s easy. Just click “Edit Text” I'm a Paragraph...</p>
+        <p>I'm a Paragraph. Click here to add your own text and edit me. It’s easy. Just click “Edit Text” or double click me and you can start adding your own content...</p>
+    </div>
+    <div class="col-md-6">
+        <h2>Lunch Special</h2>
+        <p>We source the finest beers and wines and match them with your steak.</p>
+        <p><a class="btn btn-default" href="@Url.Action("About", "Home")">READ MORE</a></p>
+    </div>
+</div>

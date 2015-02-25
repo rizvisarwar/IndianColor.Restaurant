@@ -31,5 +31,12 @@ namespace IndianColor.Restaurant.Controllers
 
             return View();
         }
+
+        public ActionResult Reservations()
+        {
+            ViewBag.Message = "Reservations";
+
+            return View();
+        }
     }
 }
