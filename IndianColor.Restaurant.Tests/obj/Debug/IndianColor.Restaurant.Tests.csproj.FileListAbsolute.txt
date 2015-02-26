@@ -18,11 +18,11 @@ C:\Users\sri\Documents\GitHub\IndianColor.Restaurant\IndianColor.Restaurant.Test
 C:\Users\sri\Documents\GitHub\IndianColor.Restaurant\IndianColor.Restaurant.Tests\bin\Debug\WebActivatorEx.dll
 C:\Users\sri\Documents\GitHub\IndianColor.Restaurant\IndianColor.Restaurant.Tests\bin\Debug\Microsoft.AspNet.Identity.Core.dll
 C:\Users\sri\Documents\GitHub\IndianColor.Restaurant\IndianColor.Restaurant.Tests\bin\Debug\Microsoft.AspNet.Identity.Owin.dll
+C:\Users\sri\Documents\GitHub\IndianColor.Restaurant\IndianColor.Restaurant.Tests\bin\Debug\EntityFramework.dll
 C:\Users\sri\Documents\GitHub\IndianColor.Restaurant\IndianColor.Restaurant.Tests\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.dll
 C:\Users\sri\Documents\GitHub\IndianColor.Restaurant\IndianColor.Restaurant.Tests\bin\Debug\System.Web.Optimization.dll
 C:\Users\sri\Documents\GitHub\IndianColor.Restaurant\IndianColor.Restaurant.Tests\bin\Debug\Microsoft.Owin.dll
 C:\Users\sri\Documents\GitHub\IndianColor.Restaurant\IndianColor.Restaurant.Tests\bin\Debug\Owin.dll
-C:\Users\sri\Documents\GitHub\IndianColor.Restaurant\IndianColor.Restaurant.Tests\bin\Debug\EntityFramework.dll
 C:\Users\sri\Documents\GitHub\IndianColor.Restaurant\IndianColor.Restaurant.Tests\bin\Debug\Microsoft.Owin.Security.dll
 C:\Users\sri\Documents\GitHub\IndianColor.Restaurant\IndianColor.Restaurant.Tests\bin\Debug\Microsoft.Owin.Security.Cookies.dll
 C:\Users\sri\Documents\GitHub\IndianColor.Restaurant\IndianColor.Restaurant.Tests\bin\Debug\Microsoft.Owin.Host.SystemWeb.dll
@@ -41,10 +41,10 @@ C:\Users\sri\Documents\GitHub\IndianColor.Restaurant\IndianColor.Restaurant.Test
 C:\Users\sri\Documents\GitHub\IndianColor.Restaurant\IndianColor.Restaurant.Tests\bin\Debug\Newtonsoft.Json.xml
 C:\Users\sri\Documents\GitHub\IndianColor.Restaurant\IndianColor.Restaurant.Tests\bin\Debug\Microsoft.AspNet.Identity.Core.xml
 C:\Users\sri\Documents\GitHub\IndianColor.Restaurant\IndianColor.Restaurant.Tests\bin\Debug\Microsoft.AspNet.Identity.Owin.xml
+C:\Users\sri\Documents\GitHub\IndianColor.Restaurant\IndianColor.Restaurant.Tests\bin\Debug\EntityFramework.xml
 C:\Users\sri\Documents\GitHub\IndianColor.Restaurant\IndianColor.Restaurant.Tests\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.xml
 C:\Users\sri\Documents\GitHub\IndianColor.Restaurant\IndianColor.Restaurant.Tests\bin\Debug\System.Web.Optimization.xml
 C:\Users\sri\Documents\GitHub\IndianColor.Restaurant\IndianColor.Restaurant.Tests\bin\Debug\Microsoft.Owin.xml
-C:\Users\sri\Documents\GitHub\IndianColor.Restaurant\IndianColor.Restaurant.Tests\bin\Debug\EntityFramework.xml
 C:\Users\sri\Documents\GitHub\IndianColor.Restaurant\IndianColor.Restaurant.Tests\bin\Debug\Microsoft.Owin.Security.xml
 C:\Users\sri\Documents\GitHub\IndianColor.Restaurant\IndianColor.Restaurant.Tests\bin\Debug\Microsoft.Owin.Security.Cookies.xml
 C:\Users\sri\Documents\GitHub\IndianColor.Restaurant\IndianColor.Restaurant.Tests\bin\Debug\Microsoft.Owin.Host.SystemWeb.xml
