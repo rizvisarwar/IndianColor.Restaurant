@@ -162,6 +162,9 @@
     <Compile Include="App_Start\IdentityConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
+    <Compile Include="Category.cs">
+      <DependentUpon>IndianColorEF.tt</DependentUpon>
+    </Compile>
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\FoodMenuItemController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
@@ -190,6 +193,7 @@
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\FoodMenuItemModels.cs" />
     <Compile Include="Models\IdentityModels.cs" />
+    <Compile Include="Models\FoodMenuCategory.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
@@ -276,6 +280,9 @@
     <Content Include="Views\Account\ResetPasswordConfirmation.cshtml" />
     <Content Include="Views\Account\SendCode.cshtml" />
     <Content Include="Views\Account\VerifyCode.cshtml" />
+    <Content Include="Views\Home\EditFoodMenuItem.cshtml" />
+    <Content Include="Views\Home\SetFoodMenuItemData.cshtml" />
+    <Content Include="Views\Shared\_MenuItemCategory.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

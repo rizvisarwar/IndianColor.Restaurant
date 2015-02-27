@@ -12,13 +12,16 @@ namespace IndianColor.Restaurant
     using System;
     using System.Collections.Generic;
     
-    public partial class FoodMenuItem
+    public partial class Category
     {
+        public Category()
+        {
+            this.FoodMenuItems = new HashSet<FoodMenuItem>();
+        }
+    
         public string Name { get; set; }
         public string Description { get; set; }
-        public string Category { get; set; }
-        public decimal Price { get; set; }
     
-        public virtual Category Category1 { get; set; }
+        public virtual ICollection<FoodMenuItem> FoodMenuItems { get; set; }
     }
 }

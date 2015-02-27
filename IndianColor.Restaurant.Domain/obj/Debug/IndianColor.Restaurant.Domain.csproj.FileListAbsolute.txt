@@ -20,3 +20,4 @@ C:\Users\sri\Documents\GitHub\IndianColor.Restaurant\IndianColor.Restaurant.Doma
 C:\Users\sri\Documents\GitHub\IndianColor.Restaurant\IndianColor.Restaurant.Domain\bin\Debug\System.Web.WebPages.Razor.xml
 C:\Users\sri\Documents\GitHub\IndianColor.Restaurant\IndianColor.Restaurant.Domain\obj\Debug\IndianColor.Restaurant.Domain.exe
 C:\Users\sri\Documents\GitHub\IndianColor.Restaurant\IndianColor.Restaurant.Domain\obj\Debug\IndianColor.Restaurant.Domain.pdb
+C:\Users\sri\Documents\GitHub\IndianColor.Restaurant\IndianColor.Restaurant.Domain\obj\Debug\IndianColor.Restaurant.Domain.csprojResolveAssemblyReference.cache

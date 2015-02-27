@@ -26,5 +26,6 @@ namespace IndianColor.Restaurant
         }
     
         public virtual DbSet<FoodMenuItem> FoodMenuItems { get; set; }
+        public virtual DbSet<Category> Categories { get; set; }
     }
 }

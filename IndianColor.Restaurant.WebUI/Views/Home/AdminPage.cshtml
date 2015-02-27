@@ -1,14 +1,70 @@
-﻿
-@{
+﻿@{
     ViewBag.Title = "Administrative Page";
 }
 <h2>@ViewBag.Title</h2>
 <h3>@ViewBag.Message</h3>
 
-<h2>Add new menu item</h2><br />
-<input type="text" id="AddMenuName" class="form-control" placeholder="Menu Name" aria-describedby="basic-addon1">
-<input type="text" id="AddCategory" class="form-control" placeholder="Category" aria-describedby="basic-addon1">
-<input type="text" id="AddDescrioption" class="form-control" placeholder="Description" aria-describedby="basic-addon1">
-<input type="text" id="AddPrice" class="form-control" placeholder="Price" aria-describedby="basic-addon1">
-<li><button type="button" class="btn btn-primary" onclick="Utils.AddFoodMenuItem($('#AddMenuName').val(), $('#AddCategory').val(), $('#AddDescrioption').val(), $('#AddPrice').val())">Add</button></li>
-<div id="ItemAddResult"></div>
+<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+    <div class="panel panel-default">
+        <div class="panel-heading" role="tab" id="headingOne">
+            <h4 class="panel-title">
+                <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                    Food Menu Item
+                </a>
+            </h4>
+        </div>
+        <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+            <div class="panel-body">
+                <div class="col-md-6">
+                    <h3>Add new menu item</h3><br />
+                    <input type="text" id="AddMenuName" class="form-control" placeholder="Menu Item Name" aria-describedby="basic-addon1">
+                    @*<input type="text" id="AddCategory" class="form-control" placeholder="Category" aria-describedby="basic-addon1">*@
+                    <div id="AddMenuCategory">@Html.Action("GetFoodMenuCategory", "Home", new { dropDownId = "AddMenuCategoryDD", selectedItem = "" })</div>
+                    <input type="text" id="AddDescrioption" class="form-control" placeholder="Description" aria-describedby="basic-addon1">
+                    <input type="text" id="AddPrice" class="form-control" placeholder="Price" aria-describedby="basic-addon1">
+                    <button type="button" class="btn btn-success" onclick="Utils.AddFoodMenuItem($('#AddMenuName').val(), $('#AddMenuCategoryDD').val(), $('#AddDescrioption').val(), $('#AddPrice').val())">Add</button>
+                    <div id="ItemAddResult"></div>
+                </div>
+                <div class="col-md-6">
+                    <h3>Edit existing menu item</h3><br />
+                    <div id="EditFoodMenuItem">
+                        @Html.Action("EditFoodMenuItem", "Home")
+                    </div>
+                    <div id="FoodMenuItemData"></div>
+                    <button type="button" class="btn btn-danger" onclick="Utils.RemoveFoodMenuItem($('#EditMenuName').val(), $('#EditCategory').val(), $('#EditDescrioption').val(), $('#EditPrice').val())">Remove</button>
+                    <button type="button" class="btn btn-warning" onclick="Utils.UpdateFoodMenuItem($('#EditMenuName').val(), $('#EditCategory').val(), $('#EditDescrioption').val(), $('#EditPrice').val())">Update</button>
+                    <div id="ItemEditResult"></div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div class="panel panel-default">
+        <div class="panel-heading" role="tab" id="headingTwo">
+            <h4 class="panel-title">
+                <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                    Menu Item Category
+                </a>
+            </h4>
+        </div>
+        <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+            <div class="panel-body">
+                Add remove update category here.
+            </div>
+        </div>
+    </div>
+    <div class="panel panel-default">
+        <div class="panel-heading" role="tab" id="headingThree">
+            <h4 class="panel-title">
+                <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                    Reservation List
+                </a>
+            </h4>
+        </div>
+        <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+            <div class="panel-body">
+                Add remove update reservations here.
+            </div>
+        </div>
+    </div>
+</div>

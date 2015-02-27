@@ -23,7 +23,6 @@ namespace IndianColor.Restaurant.Controllers
             foreach (var item in menuQuery.ToList())
             {
                 FoodMenuItemModels.FoodMenuItemModel obj = new FoodMenuItemModels.FoodMenuItemModel();
-                obj.ItemID = item.ItemID;
                 obj.Name = item.Name;
                 obj.Price = item.Price;
                 obj.Description = item.Description;

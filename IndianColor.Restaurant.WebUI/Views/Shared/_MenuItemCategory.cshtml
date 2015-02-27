@@ -1,0 +1,11 @@
+﻿@model IndianColor.Restaurant.Models.FoodMenuCategory
+@{
+    Layout = null;
+}
+
+<select class="form-control" id=@Model.DropDownId name=@Model.DropDownId>
+    @foreach (var item in Model.Items)
+    {
+        <option value='@item'>@item</option>
+    }
+</select>

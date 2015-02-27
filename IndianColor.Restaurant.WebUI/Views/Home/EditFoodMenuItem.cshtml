@@ -1,0 +1,19 @@
+﻿@model List<string>
+
+@{
+    ViewBag.Title = "FoodList";
+    Layout = null;
+}
+
+<select class="form-control" id="FoodItemNames" onchange="Utils.SetFoodMenuItemData(this.value)">
+    @foreach (var item in Model)
+    {
+        <option value='@item'>@item</option>
+    }
+</select>
+<div id="FoodItemData">
+    <input type="text" id="EditMenuName" class="form-control" placeholder="Menu Name" aria-describedby="basic-addon1">
+    <input type="text" id="EditCategory" class="form-control" placeholder="Category" aria-describedby="basic-addon1">
+    <input type="text" id="EditDescrioption" class="form-control" placeholder="Description" aria-describedby="basic-addon1">
+    <input type="text" id="EditPrice" class="form-control" placeholder="Price" aria-describedby="basic-addon1">
+</div>
