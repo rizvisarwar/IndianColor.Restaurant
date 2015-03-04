@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="IndianColorModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Category">
+    <Key>
+      <PropertyRef Name="Name" />
+    </Key>
+    <Property Name="Name" Type="nchar" MaxLength="20" Nullable="false" />
+    <Property Name="Description" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="FoodMenuItems">
+    <Key>
+      <PropertyRef Name="Name" />
+    </Key>
+    <Property Name="Name" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="Description" Type="nvarchar" MaxLength="500" Nullable="false" />
+    <Property Name="Category" Type="nchar" MaxLength="20" Nullable="false" />
+    <Property Name="Price" Type="decimal" Precision="16" Scale="2" Nullable="false" />
+  </EntityType>
+  <Association Name="FK_FoodMenuItems_ToCategory">
+    <End Role="Category" Type="Self.Category" Multiplicity="1" />
+    <End Role="FoodMenuItems" Type="Self.FoodMenuItems" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Category">
+        <PropertyRef Name="Name" />
+      </Principal>
+      <Dependent Role="FoodMenuItems">
+        <PropertyRef Name="Category" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="IndianColorModelStoreContainer">
+    <EntitySet Name="Category" EntityType="Self.Category" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="FoodMenuItems" EntityType="Self.FoodMenuItems" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_FoodMenuItems_ToCategory" Association="Self.FK_FoodMenuItems_ToCategory">
+      <End Role="Category" EntitySet="Category" />
+      <End Role="FoodMenuItems" EntitySet="FoodMenuItems" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>
