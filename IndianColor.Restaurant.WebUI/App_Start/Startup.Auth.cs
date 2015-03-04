@@ -55,8 +55,8 @@ namespace IndianColor.Restaurant
             //   consumerSecret: "");
 
             //app.UseFacebookAuthentication(
-            //   appId: "",
-            //   appSecret: "");
+            //   appId: "1560961447477173",
+            //   appSecret: "89774e48587c5c131ad184b167747a01");
 
             //app.UseGoogleAuthentication(new GoogleOAuth2AuthenticationOptions()
             //{

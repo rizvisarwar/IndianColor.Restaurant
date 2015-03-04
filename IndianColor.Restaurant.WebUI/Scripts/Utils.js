@@ -11,10 +11,10 @@
             contentType: "application/json; charset=utf-8",
             success: function (response, status, xhr) {
                 $("body").css("cursor", "default");
-                $('#ItemAddResult').empty().html(response);
+                toastr.success('New food menu item "' + name + '" added.')
             },
             error: function (XMLHttpRequest, textStatus, errorThrown) {
-                alert("error");
+                toastr.error('Could not add menu item "' + name + '"!');
                 $("body").css("cursor", "default");
             }
         });
@@ -67,10 +67,10 @@
             contentType: "application/json; charset=utf-8",
             success: function (response, status, xhr) {
                 $("body").css("cursor", "default");
-                $('#ItemEditResult').empty().html(response);
+                toastr.warning('Food menu item "' + name + '" removed!');
             },
             error: function (XMLHttpRequest, textStatus, errorThrown) {
-                alert(response);
+                toastr.error('Could not remove menu item "' + name + '"!');
                 $("body").css("cursor", "default");
             }
         });
@@ -88,10 +88,10 @@
             contentType: "application/json; charset=utf-8",
             success: function (response, status, xhr) {
                 $("body").css("cursor", "default");
-                $('#ItemEditResult').empty().html(response);
+                toastr.success('Food menu item "' + name + '" updated!');
             },
             error: function (XMLHttpRequest, textStatus, errorThrown) {
-                alert(response);
+                toastr.error('Could not update menu item "' + name + '"!');
                 $("body").css("cursor", "default");
             }
         });
