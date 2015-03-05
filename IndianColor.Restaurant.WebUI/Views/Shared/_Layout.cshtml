@@ -60,8 +60,8 @@
 
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
-                    <li><a class="btn btn-group-justified" href="@Url.Action("Home", "Home")" role="button">HOME</a></li>
-                    <li><a class="btn btn-group-justified" href="@Url.Action("About", "Home")" role="button">ABOUT US</a></li>
+                    <li><a id="navHome" class="btn btn-group-justified" href="@Url.Action("Home", "Home")" role="button">HOME</a></li>
+                    <li><a id="navAbout" class="btn btn-group-justified" href="@Url.Action("About", "Home")" role="button">ABOUT US</a></li>
                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">MENU<span class="caret"></span></a>
                         <ul class="dropdown-menu" role="menu">
@@ -74,8 +74,8 @@
                             <li><a href="@Url.Action("FoodList", "FoodMenuItem")">Full Menu</a></li>
                         </ul>
                     </li>
-                    <li><a class="btn btn-group-justified" href="@Url.Action("Reservations", "Home")" role="button">RESERVATIONS</a></li>
-                    <li><a class="btn btn-group-justified" href="@Url.Action("Contact", "Home")" role="button">LOCATION</a></li>
+                    <li><a id="navReservations" class="btn btn-group-justified" href="@Url.Action("Reservations", "Home")" role="button">RESERVATIONS</a></li>
+                    <li><a id="navLocation" class="btn btn-group-justified" href="@Url.Action("Contact", "Home")" role="button">LOCATION</a></li>
                 </ul>
                 @Html.Partial("_LoginPartial")
             </div>
@@ -85,28 +85,7 @@
         @RenderBody()
         <hr />
         <footer>
-            <div class="row">
-                <div class="col-md-4">
-                    <h2>WHERE ARE WE?</h2><br />
-                    Add text here<br />
-                    more text, more
-                </div>
-                <div class="col-md-4">
-                    <p>
-                        <h2>OPENING HOURS</h2><br>
-                        We’re open everyday<br>
-                        <h3>12:00pm-1:00am</h3>
-                    </p>
-                </div>
-                <div class="col-md-4">
-                    <h2>CHEF AT HOME</h2>
-                    <address>
-                        <strong>Support:</strong>   <a href="mailto:Support@example.com">Support@example.com</a><br />
-                        <strong>Marketing:</strong> <a href="mailto:Marketing@example.com">Marketing@example.com</a>
-                    </address>
-                </div>
-            </div>
-            <p>&copy; @DateTime.Now.Year - IndianColor Restaurant Web Application</p>
+            @Html.Partial("_Footer");
         </footer>
     </div>
 
@@ -115,3 +94,8 @@
     @RenderSection("scripts", required: false)
 </body>
 </html>
+<script type="text/javascript">
+    $(document).ready(function () {
+        Utils.MakeActive('@ViewBag.Title');
+    });
+</script>
