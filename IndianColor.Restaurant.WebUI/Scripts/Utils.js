@@ -20,6 +20,24 @@
         });
     },
 
+    AddFoodMenuCategory: function (category, description) {
+        $("body").css("cursor", "progress");
+        $.ajax({
+            url: "AddFoodMenuCategory",
+            type: "POST",
+            data: "{ category:'" + category + "', description:'" + description + "' }",
+            contentType: "application/json; charset=utf-8",
+            success: function (response, status, xhr) {
+                $("body").css("cursor", "default");
+                toastr.success('New food menu category "' + category + '" added.')
+            },
+            error: function (XMLHttpRequest, textStatus, errorThrown) {
+                toastr.error('Could not add category "' + category + '"!');
+                $("body").css("cursor", "default");
+            }
+        });
+    },
+
     GetFoodMenuItemNames: function () {
         $("body").css("cursor", "progress");
         $.ajax({
@@ -88,6 +106,24 @@
             },
             error: function (XMLHttpRequest, textStatus, errorThrown) {
                 toastr.error('Could not remove menu item "' + name + '"!');
+                $("body").css("cursor", "default");
+            }
+        });
+    },
+
+    RemoveCategory: function (category) {
+        $("body").css("cursor", "progress");
+        $.ajax({
+            url: "RemoveCategory",
+            type: "POST",
+            data: "{ category:'" + category + "' }",
+            contentType: "application/json; charset=utf-8",
+            success: function (response, status, xhr) {
+                $("body").css("cursor", "default");
+                toastr.warning('Food menu category "' + category + '" removed!');
+            },
+            error: function (XMLHttpRequest, textStatus, errorThrown) {
+                toastr.error('Could not remove menu category "' + category + '"!');
                 $("body").css("cursor", "default");
             }
         });

@@ -71,6 +71,28 @@ namespace IndianColor.Restaurant.Controllers
             }
         }
 
+        [HttpPost]
+        public ActionResult AddFoodMenuCategory(string category, string description)
+        {
+            try
+            {
+                IndianColorEntities db = new IndianColorEntities();
+
+                Category objCategory = new Category();
+                objCategory.Name = category;
+                objCategory.Description = description;
+
+                db.Categories.Add(objCategory);
+                db.SaveChanges();
+                return Content("Category added!");
+
+            }
+            catch (Exception)
+            {
+                return Content("Category was not added!");
+            }
+        }
+
         public ViewResult EditFoodMenuItem()
         {
             List<string> data = new List<string>();
@@ -135,6 +157,32 @@ namespace IndianColor.Restaurant.Controllers
         }
 
         [HttpPost]
+        public ActionResult RemoveCategory(string category)
+        {
+            try
+            {
+                IndianColorEntities db = new IndianColorEntities();
+
+                Category objRemoveCategory = new Category()
+                {
+                    Name = category,
+                };
+
+                //attach and delete object
+                db.Entry(objRemoveCategory).State = EntityState.Deleted;
+
+                //save changes
+                db.SaveChanges();
+
+                return Content("Category removed!");
+            }
+            catch (Exception)
+            {
+                return Content("Category was not removed!");
+            }
+        }
+
+        [HttpPost]
         public ActionResult UpdateFoodMenuItem(string name, string category, string description, string price)
         {
             try
@@ -177,7 +225,7 @@ namespace IndianColor.Restaurant.Controllers
 
             IndianColorEntities db = new IndianColorEntities();
             var categoryQuery = from category in db.Categories
-                            select category;
+                                select category;
             foreach (var item in categoryQuery.ToList())
             {
                 data.Add(item.Name.Trim());
