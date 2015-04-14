@@ -162,34 +162,16 @@
     <Compile Include="App_Start\IdentityConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
-    <Compile Include="Category.cs">
-      <DependentUpon>IndianColorEF.tt</DependentUpon>
-    </Compile>
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\FoodMenuItemController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
-    <Compile Include="FoodMenuItem.cs">
-      <DependentUpon>IndianColorEF.tt</DependentUpon>
-    </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="IndianColorEF.Context.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>IndianColorEF.Context.tt</DependentUpon>
-    </Compile>
-    <Compile Include="IndianColorEF.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>IndianColorEF.tt</DependentUpon>
-    </Compile>
-    <Compile Include="IndianColorEF.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>IndianColorEF.edmx</DependentUpon>
-    </Compile>
+    <Compile Include="IndianColorEF\Category.cs" />
+    <Compile Include="IndianColorEF\FoodMenuItem.cs" />
+    <Compile Include="IndianColorEF\IndianColorModel.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\FoodMenuItemModels.cs" />
     <Compile Include="Models\IdentityModels.cs" />
@@ -212,23 +194,6 @@
     <Content Include="Images\jumbotronbackground.jpg" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
-    <EntityDeploy Include="IndianColorEF.edmx">
-      <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>IndianColorEF.Designer.cs</LastGenOutput>
-    </EntityDeploy>
-    <Content Include="IndianColorEF.Context.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>IndianColorEF.edmx</DependentUpon>
-      <LastGenOutput>IndianColorEF.Context.cs</LastGenOutput>
-    </Content>
-    <Content Include="IndianColorEF.edmx.diagram">
-      <DependentUpon>IndianColorEF.edmx</DependentUpon>
-    </Content>
-    <Content Include="IndianColorEF.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>IndianColorEF.edmx</DependentUpon>
-      <LastGenOutput>IndianColorEF.cs</LastGenOutput>
-    </Content>
     <Content Include="Content\toastr.scss" />
     <Content Include="Content\toastr.less" />
     <None Include="Properties\PublishProfiles\essevm385.pubxml" />
