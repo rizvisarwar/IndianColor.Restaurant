@@ -53,17 +53,6 @@ namespace IndianColor.Restaurant.Controllers
         {
             try
             {
-                //IndianColorEntities db = new IndianColorEntities();
-
-                //FoodMenuItem objNewMenuItem = new FoodMenuItem();
-                //objNewMenuItem.Name = name;
-                //objNewMenuItem.Category = category;
-                //objNewMenuItem.Description = description;
-                //objNewMenuItem.Price = decimal.Parse(price, CultureInfo.InvariantCulture);
-
-                //db.FoodMenuItems.Add(objNewMenuItem);
-                //db.SaveChanges();
-
                 using (var context = new IndianColorModel())
                 {
                     FoodMenuItem objNewMenuItem = new FoodMenuItem();
@@ -89,15 +78,6 @@ namespace IndianColor.Restaurant.Controllers
         {
             try
             {
-                //IndianColorEntities db = new IndianColorEntities();
-
-                //Category objCategory = new Category();
-                //objCategory.Name = category;
-                //objCategory.Description = description;
-
-                //db.Categories.Add(objCategory);
-                //db.SaveChanges();
-
                 using (var context = new IndianColorModel())
                 {
                     Category objCategory = new Category();
@@ -120,15 +100,6 @@ namespace IndianColor.Restaurant.Controllers
         {
             List<string> data = new List<string>();
 
-            //IndianColorEntities db = new IndianColorEntities();
-
-            //var menuQuery = from menu in db.FoodMenuItems
-            //                select menu;
-            //foreach (var item in menuQuery.ToList())
-            //{
-            //    data.Add(item.Name);
-            //}
-
             using (var context = new IndianColorModel())
             {
                 var menuQuery = from menu in context.FoodMenuItems
@@ -146,16 +117,6 @@ namespace IndianColor.Restaurant.Controllers
         public ViewResult SetFoodMenuItemData(string name)
         {
             FoodMenuItemModels.FoodMenuItemModel data = new FoodMenuItemModels.FoodMenuItemModel();
-
-            //IndianColorEntities db = new IndianColorEntities();
-
-            //var menuQuery = from menu in db.FoodMenuItems
-            //                where menu.Name == name
-            //                select menu;
-            //data.Name = menuQuery.First().Name;
-            //data.Description = menuQuery.First().Description;
-            //data.Category = menuQuery.First().Category;
-            //data.Price = menuQuery.First().Price;
 
             using (var context = new IndianColorModel())
             {
@@ -176,22 +137,6 @@ namespace IndianColor.Restaurant.Controllers
         {
             try
             {
-                //IndianColorEntities db = new IndianColorEntities();
-
-                //FoodMenuItem objRemoveMenuItem = new FoodMenuItem()
-                //{
-                //    Name = name,
-                //    Category = category,
-                //    Description = description,
-                //    Price = decimal.Parse(price, CultureInfo.InvariantCulture)
-                //};
-
-                ////attach and delete object
-                //db.Entry(objRemoveMenuItem).State = EntityState.Deleted;
-
-                ////save changes
-                //db.SaveChanges();
-
                 using (var context = new IndianColorModel())
                 {
                     FoodMenuItem objRemoveMenuItem = new FoodMenuItem()
@@ -222,19 +167,6 @@ namespace IndianColor.Restaurant.Controllers
         {
             try
             {
-                //IndianColorEntities db = new IndianColorEntities();
-
-                //Category objRemoveCategory = new Category()
-                //{
-                //    Name = category,
-                //};
-
-                ////attach and delete object
-                //db.Entry(objRemoveCategory).State = EntityState.Deleted;
-
-                ////save changes
-                //db.SaveChanges();
-
                 using (var context = new IndianColorModel())
                 {
                     Category objRemoveCategory = new Category()
@@ -262,20 +194,6 @@ namespace IndianColor.Restaurant.Controllers
         {
             try
             {
-                //IndianColorEntities db = new IndianColorEntities();
-
-                //var menuQuery = from menu in db.FoodMenuItems
-                //                where menu.Name == name
-                //                select menu;
-                //FoodMenuItem objMenu = menuQuery.Single();
-
-                //objMenu.Name = name;
-                //objMenu.Category = category;
-                //objMenu.Description = description;
-                //objMenu.Price = decimal.Parse(price, CultureInfo.InvariantCulture);
-
-                //db.SaveChanges();
-
                 using (var context = new IndianColorModel())
                 {
                     var menuQuery = from menu in context.FoodMenuItems
@@ -312,14 +230,6 @@ namespace IndianColor.Restaurant.Controllers
         private List<string> GetCategoryFromDB()
         {
             List<string> data = new List<string>();
-
-            //IndianColorEntities db = new IndianColorEntities();
-            //var categoryQuery = from category in db.Categories
-            //                    select category;
-            //foreach (var item in categoryQuery.ToList())
-            //{
-            //    data.Add(item.Name.Trim());
-            //}
 
             using (var context = new IndianColorModel())
             {
