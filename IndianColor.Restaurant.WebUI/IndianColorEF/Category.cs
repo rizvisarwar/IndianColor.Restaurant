@@ -18,5 +18,6 @@ namespace IndianColor.Restaurant.IndianColorEF
         public string Description { get; set; }
 
         //public virtual ICollection<FoodMenuItem> FoodMenuItems { get; set; }
+        //test to git push
     }
 }
