@@ -5,7 +5,7 @@
 <h3>@ViewBag.Message</h3>
 <div class="row">
     <div class="col-md-8">
-        <div id="carousel-example-generic" class="carousel slide" data-ride="carousel" style="width:600px;height:400px">
+        <div id="carousel-example-generic" class="carousel slide" data-ride="carousel" style="width:600px;height:400px" data-interval="3000">
             <!-- Indicators -->
             <ol class="carousel-indicators">
                 <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
@@ -51,3 +51,9 @@
         <p><a class="btn btn-default" href="@Url.Action("About", "Home")">READ MORE</a></p>
     </div>
 </div>
+
+<script>
+    $('.carousel').carousel({
+        interval: 3000
+    })
+</script>
