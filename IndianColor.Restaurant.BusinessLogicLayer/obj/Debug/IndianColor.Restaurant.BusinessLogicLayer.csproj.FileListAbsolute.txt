@@ -1,0 +1,5 @@
+C:\Users\sri\Documents\GitHub\IndianColor.Restaurant\IndianColor.Restaurant.BusinessLogicLayer\bin\Debug\IndianColor.Restaurant.BusinessLogicLayer.dll
+C:\Users\sri\Documents\GitHub\IndianColor.Restaurant\IndianColor.Restaurant.BusinessLogicLayer\bin\Debug\IndianColor.Restaurant.BusinessLogicLayer.pdb
+C:\Users\sri\Documents\GitHub\IndianColor.Restaurant\IndianColor.Restaurant.BusinessLogicLayer\obj\Debug\IndianColor.Restaurant.BusinessLogicLayer.csprojResolveAssemblyReference.cache
+C:\Users\sri\Documents\GitHub\IndianColor.Restaurant\IndianColor.Restaurant.BusinessLogicLayer\obj\Debug\IndianColor.Restaurant.BusinessLogicLayer.dll
+C:\Users\sri\Documents\GitHub\IndianColor.Restaurant\IndianColor.Restaurant.BusinessLogicLayer\obj\Debug\IndianColor.Restaurant.BusinessLogicLayer.pdb
