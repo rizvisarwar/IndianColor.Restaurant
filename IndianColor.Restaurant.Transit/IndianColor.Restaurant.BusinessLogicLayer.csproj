@@ -8,7 +8,7 @@
     <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>IndianColor.Restaurant.Transit</RootNamespace>
-    <AssemblyName>IndianColor.Restaurant.Transit</AssemblyName>
+    <AssemblyName>IndianColor.Restaurant</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <TargetFrameworkProfile />
