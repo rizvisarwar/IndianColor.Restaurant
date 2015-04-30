@@ -10,6 +10,7 @@ using System.Web.Mvc;
 
 namespace IndianColor.Restaurant.Controllers
 {
+    [RequireHttps]
     public class HomeController : Controller
     {
         public ActionResult Index()
