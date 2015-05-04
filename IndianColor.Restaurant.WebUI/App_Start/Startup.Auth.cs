@@ -58,11 +58,11 @@ namespace IndianColor.Restaurant
                appId: "1560961447477173",
                appSecret: "89774e48587c5c131ad184b167747a01");
 
-            //app.UseGoogleAuthentication(new GoogleOAuth2AuthenticationOptions()
-            //{
-            //    ClientId = "",
-            //    ClientSecret = ""
-            //});
+            app.UseGoogleAuthentication(new GoogleOAuth2AuthenticationOptions()
+            {
+                ClientId = "207576237756-peqhcs7vgo0stlv2hn56ihuvakh9is6r.apps.googleusercontent.com",
+                ClientSecret = "Z29qSq24EcHsLPLJgbwAsJKN"
+            });
         }
     }
 }
