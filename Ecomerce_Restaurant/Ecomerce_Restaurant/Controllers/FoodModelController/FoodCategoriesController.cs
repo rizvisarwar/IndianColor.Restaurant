@@ -7,18 +7,33 @@ using System.Net;
 using System.Web;
 using System.Web.Mvc;
 using Ecomerce_Restaurant.Models.FoodModels;
+using System.Threading;
 
 namespace Ecomerce_Restaurant.Controllers.FoodModelController
 {
     public class FoodCategoriesController : Controller
     {
-        private FoodModelsDB db = new FoodModelsDB();
+        FoodModelsDB db = new FoodModelsDB();
 
         // GET: FoodCategories
+
+        //[Authorize(Users = "priyanka_tasnia@yahoo.com")]
+
         public ActionResult Index()
         {
-            return View(db.FoodCategoriesesTable.ToList());
+            //    var p = db.FoodNamesTable.OrderBy(r => r.CategoryName).ToList() ;
+            var q = db.FoodCategoriesesTable.OrderBy(r => r.CategoryName).ToList();
+
+            return View(q);
         }
+        //[HttpPost]
+        //public ActionResult addviewtoindex() 
+        //{
+
+        //    var p = db.FoodNamesTable.OrderBy(r => r.CategoryName).ToList();
+
+        //    return (p);
+        //}
 
         // GET: FoodCategories/Details/5
         public ActionResult Details(int? id)
@@ -38,7 +53,8 @@ namespace Ecomerce_Restaurant.Controllers.FoodModelController
         // GET: FoodCategories/Create
         public ActionResult Create()
         {
-            return View();
+            Thread.Sleep(1000);
+            return PartialView();
         }
 
         // POST: FoodCategories/Create
@@ -61,16 +77,8 @@ namespace Ecomerce_Restaurant.Controllers.FoodModelController
         // GET: FoodCategories/Edit/5
         public ActionResult Edit(int? id)
         {
-            if (id == null)
-            {
-                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
-            }
             FoodCategories foodCategories = db.FoodCategoriesesTable.Find(id);
-            if (foodCategories == null)
-            {
-                return HttpNotFound();
-            }
-            return View(foodCategories);
+            return PartialView(foodCategories);
         }
 
         // POST: FoodCategories/Edit/5
@@ -84,32 +92,33 @@ namespace Ecomerce_Restaurant.Controllers.FoodModelController
             {
                 db.Entry(foodCategories).State = EntityState.Modified;
                 db.SaveChanges();
+
                 return RedirectToAction("Index");
             }
             return View(foodCategories);
         }
 
         // GET: FoodCategories/Delete/5
-        public ActionResult Delete(int? id)
+        public ActionResult Delete(int? delid)
         {
-            if (id == null)
+            if (delid == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            FoodCategories foodCategories = db.FoodCategoriesesTable.Find(id);
+            FoodCategories foodCategories = db.FoodCategoriesesTable.Find(delid);
             if (foodCategories == null)
             {
                 return HttpNotFound();
             }
-            return View(foodCategories);
+            return PartialView(foodCategories);
         }
 
         // POST: FoodCategories/Delete/5
-        [HttpPost, ActionName("Delete")]
+        [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult DeleteConfirmed(int id)
+        public ActionResult DeleteConfirmed(int delid)
         {
-            FoodCategories foodCategories = db.FoodCategoriesesTable.Find(id);
+            FoodCategories foodCategories = db.FoodCategoriesesTable.Find(delid);
             db.FoodCategoriesesTable.Remove(foodCategories);
             db.SaveChanges();
             return RedirectToAction("Index");
@@ -123,5 +132,14 @@ namespace Ecomerce_Restaurant.Controllers.FoodModelController
             }
             base.Dispose(disposing);
         }
+
+        public ActionResult foodview() 
+        {
+
+            var v = db.FoodNamesTable.ToList();
+            return PartialView(v);
+        }
+
+
     }
 }
