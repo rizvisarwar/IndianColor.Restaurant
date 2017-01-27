@@ -13,3 +13,4 @@ IndianColor.Restaurant.WebUI/bin/IndianColor.Restaurant.dll
 IndianColor.Restaurant.WebUI/bin/IndianColor.Restaurant.pdb
 IndianColor.Restaurant.WebUI/obj/Debug/IndianColor.Restaurant.pdb
 IndianColor.Restaurant.WebUI/obj/Debug/IndianColor.Restaurant.dll
+*.suo
