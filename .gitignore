@@ -1,3 +1,13 @@
 *.suo
 *.cache
-*.suo
+IndianColor.Restaurant.BusinessLogicLayer/obj/*
+IndianColor.Restaurant.BusinessLogicLayer/bin/*
+IndianColor.Restaurant.Domain/bin/*
+IndianColor.Restaurant.Domain/obj/*
+IndianColor.Restaurant.Tests/bin/*
+IndianColor.Restaurant.Tests/obj/*
+IndianColor.Restaurant.WebUI/bin/*
+IndianColor.Restaurant.WebUI/obj/*
+*.user
+*.pdb
+.vs/config/applicationhost.config
